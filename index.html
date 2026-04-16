@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Afterburner</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <div class="logo">
+                <img src="TF2-Symbol.png" alt="TF2 Logo" width="90">
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+
+    <h2 class="title"><a href="https://youtu.be/WUhOnX8qt3I?si=7sHAUnpXLE698Lw0" target="_blank">Meet the Pyro</a></h2>
+
+    <div class="pyro-image-container mb-4">
+        <img src="Smoke.jpg">
+    </div>
+
+    <div class="pyro-image-caption">
+        <p>
+            One Shudders to Imagine what inhuman thoughts lie behind that mask.
+            What dreams of chronic and sustained cruelty...
+        </p>
+    </div>
+
+    <div class="row align-items-start g-4">
+
+        <div class="col-lg-5">
+
+            <div class="info-panel p-4 rounded-4 h-100">
+
+                <h3 class="text-warning"><a href="https://wiki.teamfortress.com/wiki/Pyro" target="_blank">The Pyro</a></h3>
+                <p>
+                    The Pyro is the pyromaniac class of the 9 mercenaries, wielding a Flamethrower as its main source of its firepower, 
+                    igniting enemies on fire, reflecting projectiles, and extinuishing teamates. 
+                    Nothing is much known of the Pyro, only its burning passion for all things fire-related.
+                    Either way, he's a fearsome, inscrutable, on-fire Frankenstein of a man - if he even is a man.
+                </p>
+
+                <div class="text-center mt-3">
+                    <img src="Pyro.png" 
+                         class="img-fluid"
+                         style="max-width: 400px;">
+                </div>
+
+                <h3 class="text-warning"><a href="https://wiki.teamfortress.com/wiki/Fire#Afterburn" target="_blank">Afterburn</a></h3>
+                <p>
+                    damage-over-time effect caused by fire-based weapons that 
+                    continues to burn enemies for a few seconds after they’re ignited. It slowly 
+                    drains health and can be extinguished by water, health packs, Mad Milk, Jarate, the Manmelter, or a friendly Pyro's airblast.
+                </p>
+
+                <div class="text-center mt-3">
+                    <img src="Afterburn.png" 
+                         class="img-fluid"
+                         style="max-width: 400px;">
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-7">
+
+            <div class="form-panel p-4 rounded-4 h-100">
+
+                <h4 class="text-warning">Afterburn Analyzer</h4>
+
+                <details ontoggle="instruct()">
+                    <summary>System Note:</summary>
+                    <i id="note">This system analyzes combustion conditions using ignition temperature,
+                    fuel density, and exposure time to determine afterburn efficiency.</i>
+                </details>
+
+                <br>
+
+                <form>
+
+                    <label id="deg" class="m-2">Ignition Temperature (°C)</label>
+                    <input type="number" class="form-control mb-3"
+                    id="temp" placeholder="Enter heat level">
+
+                    <label id="deg" class="m-2">Fuel Density (%)</label>
+                    <input type="number" class="form-control mb-3"
+                    id="humid" placeholder="Enter fuel level">
+
+                    <label id="deg" class="m-2">Time on Target</label>
+                    <input type="number" class="form-control mb-3"
+                    id="time" placeholder="Exposure duration">
+
+                    <label id="deg" class="m-2">Flamethrower</label>
+                    <select id="primary" class="form-control mb-2">
+                        <option value="stock" selected>Default Flamethrower</option>
+                        <option value="phlog">The Phlogistonator</option>
+                        <option value="backburner">The Backburner</option>
+                        <option value="dragonsfury">The Dragon's Fury</option>
+                        <option value="degreaser">The Degreaser</option>
+                    </select>
+
+                    <label id="deg" class="m-2">Secondary</label>
+                    <select id="secondary" class="form-control mb-3">
+                        <option value="none">None</option>
+                        <option value="flaregun">Flare Gun</option>
+                        <option value="detonator">Detonator</option>
+                        <option value="scorch">Scorch Shot</option>
+                        <option value="manmelter">Manmelter</option>
+                        <option value="gas">Gas Passer</option>
+                    </select>
+
+                    <button type="button" class="btn btn-warning w-100"
+                    onclick="HeatIndex()">
+                        Run Afterburn Analysis
+                    </button>
+
+                </form>
+
+                <div id="message1" class="pyro-terminal mt-3"></div>
+
+                <div class="text-center mt-3">
+                    <img src="Pyro-Symbol.png" 
+                         class="img-fluid"
+                         style="max-width: 160px;">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+    <footer class="text-center text-light mt-4">
+        <p> The Third Degree | 9-Ruby | Thermal Systems Division</p>
+        <p>TF Industries</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
